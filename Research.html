@@ -57,16 +57,26 @@
         <li>
             <a href="https://soc.ece.ubc.ca/">System-on-a-Chip Lab at UBC</a>
             <p>I am currently working on two projects. The first project involves simulating and then building and 
-                testing a frequency noise discriminator utilizing a Mach-Zender interferometer. The essence 
-                of our circuit is that a laser (with noise) is inputted into the circuit. The laser is then 
-                split into two beams. One of the beams goes through a phase shifter. The beams then rejoin 
-                and are at quadrature (i.e. 50% amplitude). The output of the combined beam is then measured 
-                on a photodiode.</p>
-            <p>The second project involves creating a program in MATLAB that calculates the lineshape of a 
-                laser given its Frequency Noise PSD (Power Spectral Density). The Frequency Noise PSD 
-                describes the power spectrum of the noise within a laser as a function of frequency. The 
+                testing a frequency noise discriminator circuit utilizing an MZI (Mach-Zender interferometer). An MZI 
+                frequency noise discriminator circuit is used to detect and quantify frequency noise in 
+                optical communication and sensing systems. It works by splitting a coherent light source 
+                into two paths, allowing them to travel different lengths or undergo different
+                phase modulations, and then recombining them to create an interference 
+                pattern. Frequency noise in the light source causes variations in the phase difference 
+                between the two paths, which results in changes in the interference pattern's intensity. 
+                Photodetectors measure these intensity variations, and signal processing techniques are 
+                used to analyze and quantify the noise. This method is crucial for improving the performance 
+                and precision of optical systems by mitigating the effects of frequency noise. The circuit schematic
+                for the frequency noise discriminator circuit in Simulink is shown below:</p>
+            <img src="Images/SimulinkFNDCircuit.png" alt="MZI Circuit" width="400" height="150">    
+            
+            <p>The second project involves creating several programs in MATLAB dealing with the relationship 
+                between the Frequency Noise PSD of a laser and its lineshape. The Frequency Noise PSD 
+                describes the power spectrum of the noise within a laser as a function of frequency, while the 
                 lineshape of a laser, which shows the intensity of the output laser as a function of frequency, 
-                is a good metric for measuring the quality of the laser.</p>    
+                is a good metric for measuring the quality of the laser. It is known that there is an algorithm
+                which, given the Frequency Noise PSD of a laser, can calculate the lineshape of the laser.
+            </p>    
         </li>
         <li>
             <a href="https://www.triumf.ca/student-stories/checking-triumf%E2%80%99s-fysre-awardees">TRIUMF Interview</a>
