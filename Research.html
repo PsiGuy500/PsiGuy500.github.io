@@ -98,24 +98,36 @@
             <p>\(\pi^+ \rightarrow \mu^+ + \nu_\mu\)</p>
             <p>Here is the interesting part. So far, only left-handed neutrinos (neutrinos with a spin 
                 antiparallel to their linear momentum) exist. We also know that pions have no spin. 
-                Therefore, due to conservation of momentum, both the muon and neutrino are produced 
+                Therefore, due to conservation of momentum, both the antimuon and neutrino are produced 
                 with a spin antiparallel with their linear momentum in the pion rest frame. A diagram 
                 of such a process is shown below:
             </p>
             <img src="Images/PionDecay.png" alt="Pion Decay" width="400" height="150">
 
-            <p>Once we have our muons, we can use them to perform mu-SR. The essence of mu-SR is that we 
-                take a sample and bombard it with muons. The muons will then stop in the sample and 
-                precess about the local magnetic field. The precession frequency is given by:
-                \(\omega = \gamma B\)</p>
+            <p>Once we have our antimuons, we can use them to perform mu-SR. The essence of mu-SR is that we 
+                take a sample (usually made of aluminium, carbon, or silver) and bombard it with the generated 
+                antimuons. The antimuons will then stop in the sample and precess about the local magnetic field. 
+                The precession frequency is given by:</p>
+                <p>\(\omega = \gamma B\)</p>
             <p>where \(\gamma \) is the gyromagnetic ratio of the muon and \(B\) is the local magnetic field. 
-                By measuring the time evolution of the muon polarization, we can extract information about 
-                the local magnetic field at the muon site. This is useful for studying magnetic materials 
+                By measuring the time evolution of the antimuon polarization, we can extract information about 
+                the local magnetic field at the sample. This is useful for studying magnetic materials 
                 and understanding the magnetic properties of materials. </p>
+            <p>However, the process does not end there. Antimuons have a mean lifetime of 
+                \(\tau = 2.2\text{ \mu s}\) and will eventually decay into a positron, an
+                electron neutrino, and a muon antineutrino:</p>
+                <p>\(\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu\)</p>
             
-
+            <p>The bulk of my research involved using G4beamline for designing and simulating a variety of detector 
+                setups for the \(\mu \)SR experiment and then eventually testing them. The detector setups consisted 
+                of a series of photomultiplier tubes (PMTs) and scintillators that would detect the positrons emitted 
+                from the antimuon decay. We would detect both the time and position of the positron emission in order
+                to learn more about the antimuon decay process, as well as the spin precession of the antimuons.
+                A concpetual example of a detector setup is shown below: 
+            </p>
+            
             <img src="Images/muSR_setup.png" alt="TRIUMF research" width="300" height="300">
-
+            <p>Below is a link for my interview with TRIUMF:</p>
             <a href="https://www.triumf.ca/student-stories/checking-triumf%E2%80%99s-fysre-awardees">TRIUMF Interview</a>
         </li>
     </ul>
