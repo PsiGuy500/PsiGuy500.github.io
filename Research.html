@@ -46,8 +46,17 @@
                 describes the power spectrum of the noise within a laser as a function of frequency, while the 
                 lineshape of a laser shows the intensity of the output laser as a function of frequency and 
                 is thus a good metric for measuring the quality of the laser. An algorithm exists that, 
-                given the Frequency Noise PSD of a laser, can calculate the lineshape of the laser.
-            </p>    
+                given the Frequency Noise PSD of a laser, can calculate the lineshape of the laser. The algorithm 
+                is as follows; given the Frequency Noise PSD of a laser, \(S_{\delta \nu}(f)\), of the laser lightfield:
+            </p>
+            <p>\(E(t)=E_0e^{i(2\pi \nu_0 t +\phi (t))}e^\)</p> 
+
+            <p>where \(\nu_0\) is the carrier frequency, \(\phi (t)\) is the phase noise, and \(E_0\) is the amplitude,
+                we can find the autocorrelation function of the lightfield, \(\Gamma (\tau) = E^{*}(t)E(t+\tau)\). 
+                The explicit expression of the autocorrelation function is:</p> 
+            
+            <p>\( \Gamma_E(\tau) = E_0^2 e^{i 2 \pi \nu_0 \tau} e^{-2 \int_{0}^{\infty} S_{\delta \nu}(f) \frac{\sin^2(\pi f \tau)}{f^2} \, df} \)</p>    
+                  
         </li>
         <li>
             <a href="https://www.triumf.ca/">TRIUMF</a>
