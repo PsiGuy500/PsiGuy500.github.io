@@ -51,11 +51,22 @@
             </p>
             <p>\(E(t)=E_0e^{i(2\pi \nu_0 t +\phi (t))}\)</p> 
 
-            <p>where \(\nu_0\) is the carrier frequency, \(\phi (t)\) is the phase noise, and \(E_0\) is the amplitude,
+            <p>where \(\nu_0\) is average frequency value, \(\phi (t)\) is the phase noise, and \(E_0\) is the amplitude,
                 we can find the autocorrelation function of the lightfield, \(\Gamma (\tau) = E^{*}(t)E(t+\tau)\). 
                 The explicit expression of the autocorrelation function is:</p> 
             
-            <p>\( \Gamma_E(\tau) = E_0^2 e^{i 2 \pi \nu_0 \tau} e^{-2 \int_{0}^{\infty} S_{\delta \nu}(f) \frac{\sin^2(\pi f \tau)}{f^2} \, df} \)</p>    
+            <p>\( \Gamma_E(\tau) = E_0^2 e^{i 2 \pi \nu_0 \tau} e^{-2 \int_{0}^{\infty} S_{\delta \nu}(f) \frac{\sin^2(\pi f \tau)}{f^2} \, df} \)</p>
+            
+            <p>Once we have our autocorrelation function, \(\Gamma (\tau)\), we can find the laser lineshape, \(S_E(\nu)\), by 
+                taking the fourier transform of the autocorrelation function.</p>
+             
+             <p>\(S_E(\nu) = 2 \int_{-\infty}^{\infty} \Gamma_E(\tau) e^{-i 2 \pi \nu \tau} \, d\tau\)</p>
+             
+            <p>The main problem is that for the vast majority of possible functions for \(S_{\delta \nu}(f)\), we cannot yield
+                an analytical solution for the lineshape. Thus, the bulk of the work that I am doing for this specific project is 
+                creating numerical algorithms that can approximate the lineshape for a various functions of \(S_{\delta \nu}(f)\) and analyzing 
+                how quantifiable changes in the Frequency Noise PSD affect the lineshape. 
+            </p> 
                   
         </li>
         <li>
