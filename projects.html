@@ -22,9 +22,9 @@
     <ul>
         <li>
             <p>PCB Project<p>
-            <p>Using KiCad, I designed a signal-generator chip that utilizes a 15V DC signal passed through a 
+            <p>Using KiCad, I designed a signal-generator chip that utilizes a 15V DC signal that passes through a 
                 voltage regulator to produce 5V DC. This 5V is then converted to -5V to power the rails of an 
-                op-amp, enabling control of the output signal amplitude. The 5V also powers a 100kHz Timer/Oscillator, 
+                op-amp, enabling control of the output signal amplitude. The 5V also powers a 100 kHz timer/oscillator, 
                 producing a square wave signal that can be tuned in combination with potentiometers and the op-amp. 
                 The tuned signal can be read from a through-hole test port.</p>
              <p>If we want to design such a PCB, we need to first create a schematic file of the form 
@@ -38,7 +38,7 @@
             <p>We now have finished designing our schematic. But how do we go from a schematic to the actual 
                 physical layout of the circuit? The answer is using footprints. In KiCad, the physical layout 
                 of a component as it will be placed on the printed circuit board (PCB) is called its footprint. 
-                 This means that we have to apply the appropriate footprint for each of the components. For example, 
+                 This means that we have to apply the appropriate footprint for each component. For example, 
                  the footprint for a 10 nF capacitor is shown below:</p>
 
                <img src="Images/PCBFootprint.png" alt="PCB Project" width="450" height="300">  
@@ -50,7 +50,7 @@
                <img src="Images/SkeletonPCB.png" alt="PCB Project" width="650" height="500">
              
             <p>The next step is to actually connect the components. Remember in the beginning where I showed two 
-                separate schematics? This means that we have to make two separate layers of connections, both 
+                separate schematics? This means that we have to make two separate connection layers, both 
                 utilizing copper for the connections. Once we have properly connected all our components, we can 
                 generate the relevant gerber files. The gerber files will be used to eventually manufacture our 
                 circuit. A picture of both the final PCB design as well as the circuit itself are shown below:

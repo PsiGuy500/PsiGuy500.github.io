@@ -27,7 +27,7 @@
         <li>
             <a href="https://soc.ece.ubc.ca/">System-on-a-Chip Lab at UBC</a>
             <p>I am currently working on two projects. The first project involves simulating and then building and 
-                testing a frequency noise discriminator circuit utilizing an MZI (Mach-Zender interferometer). An MZI 
+                testing a frequency noise discriminator circuit utilizing an MZI (Mach-Zehnder interferometer). An MZI 
                 frequency noise discriminator circuit is used to detect and quantify frequency noise in 
                 optical communication and sensing systems. It works by splitting a coherent light source 
                 into two paths, allowing them to travel different lengths or undergo different
@@ -44,20 +44,20 @@
             <p>The second project involves creating several programs in MATLAB dealing with the relationship 
                 between the Frequency Noise PSD of a laser and its lineshape. The Frequency Noise PSD 
                 describes the power spectrum of the noise within a laser as a function of frequency, while the 
-                lineshape of a laser, which shows the intensity of the output laser as a function of frequency, 
-                is a good metric for measuring the quality of the laser. It is known that there is an algorithm
-                which, given the Frequency Noise PSD of a laser, can calculate the lineshape of the laser.
+                lineshape of a laser shows the intensity of the output laser as a function of frequency and 
+                is thus a good metric for measuring the quality of the laser. An algorithm exists that, 
+                given the Frequency Noise PSD of a laser, can calculate the lineshape of the laser.
             </p>    
         </li>
         <li>
             <a href="https://www.triumf.ca/">TRIUMF</a>
             <p>In the summer of 2022, I was performing research in the field of \(\mu \)SR (muon Spin Resonance) 
-                in the CMMS (Center for Molecular and Material Science) at TRIUMF. Before I delve directly into
+                in the CMMS (Centre for Molecular and Material Science) at TRIUMF. Before I delve directly into
                 what \(\mu \)SR is, it is important to introduce what muons are and how we generate them.
             </p>
-            <p> Muons are elementary particles similar to that of electrons (same spin and charge) but 
+            <p> Muons are elementary particles similar to electrons (same spin and charge) but 
                 with a mass roughly 207 times as large. To generate muons in a lab, we need to first
-                generate pions, a type of meson that are composed of a quark and an antiquark. We do this by 
+                generate pions, a type of meson composed of a quark and an antiquark. We do this by 
                 firing a proton beam at a target usually made of graphite or beryllium. 
             </p>
             <p>\(p+p \rightarrow p+n+\pi^+\)</p>
@@ -69,7 +69,7 @@
             <p>Here is the interesting part. So far, only left-handed neutrinos (neutrinos with a spin 
                 antiparallel to their linear momentum) exist. We also know that pions have no spin. 
                 Therefore, due to conservation of momentum, both the antimuon and neutrino are produced 
-                with a spin antiparallel with their linear momentum in the pion rest frame. A diagram 
+                with a spin antiparallel to their linear momentum in the pion rest frame. A diagram 
                 of such a process is shown below:
             </p>
             <img src="Images/PionDecay.png" alt="Pion Decay" width="400" height="150">
@@ -93,7 +93,7 @@
                 of a series of photomultiplier tubes (PMTs) and scintillators that would detect the positrons emitted 
                 from the antimuon decay. We would detect both the time and position of the positron emission in order
                 to learn more about the antimuon decay process, as well as the spin precession of the antimuons.
-                A concpetual example of a detector setup is shown below: 
+                A conceptual example of a detector setup is shown below: 
             </p>
             
             <img src="Images/muSR_setup.png" alt="TRIUMF research" width="300" height="300">
@@ -103,7 +103,7 @@
         <li>
             <a href="https://www.ubcorbit.com/">UBC Orbit</a>
             <p>From the summer of 2021 to February of 2024, I was part of UBC Orbit, a student design team at UBC
-                dedicated to designing and developing satellites. Specifically I worked on a project called ALEASAT,
+                dedicated to designing and developing satellites. Specifically, I worked on a project called ALEASAT,
                 a collaboration with SFU (Simon Fraser University) and UBC Orbit to develop a 1U CubeSat (a small satellite
                 that is 10 cm x 10 cm x 10 cm) that would provide on-demand images of Earth to amateur radio operators. 
                 During my time at UBC Orbit, I worked in three different sub-teams; Orbital determination, Command 
@@ -114,7 +114,7 @@
                 the Canadian government in order to prove that our CubeSat would decay back to Earth within 25 years. 
                 Using STK (Systems Tool Kit), I simulated the orbit of our CubeSat in a variety of different 
                 circumstances taking into account the altitude, weight, dimensions, and drag coefficient of the CubeSat as well as 
-                the atmospheric and solar models and orbital proragator of the CubeSat. With another team member who 
+                the atmospheric and solar models and orbital propagator of the CubeSat. With another team member who 
                 performed the simulations using GMAT (General Mission Analysis Tool), we recorded the results and
                 submitted them to the Canadian government for approval, which we received. 
             </p>   
@@ -124,7 +124,7 @@
                 orbit, used the TLE data of the satellite to predict the position of the satellite sometime in the 
                 future within an accuracy of 10 km or below. As long as the TLE was updated every few weeks (two weeks was
                 recommended to be safe), the program did not produce a large error. Prior to the development 
-                of the final program, I created several trial programs in MATLAB to test a variety of orbital algorithms
+                of the final program, I created several trial programs in MATLAB to test various orbital algorithms
                 in order to find the optimal algorithm. For the final program, I read parts of several Masters theses and 
                 often consulted an orbital mechanics textbook for reference (the textbook that I used was 
                 <i>Orbital Mechanics for Engineering Students</i> by Howard D. Curtis) where I learned about
@@ -138,10 +138,10 @@
             </p>
             <p>
                 (3) The final team that I worked on was in the Attitude Determination and Control System (ADCS) sub-team, 
-                which was my personal favourite due to physics and expiremental nature of the work as well as the
+                which was my personal favourite due to physics and experimental nature of the work as well as the
                 collaboration involved. The first task that I worked on was contributing to the development, building, 
                 and testing of a Helmhlotz cage for our satellite. For reference, a Helmholtz coil is a pair 
-                of two electromagnets on the same axis each with identical currents (same magnitude and direction) 
+                of electromagnets on the same axis each with identical currents (same magnitude and direction) 
                 separated by a distance of \(R\) where \(R\) is the radius of the coil. A Helmholtz cage
                 is a device that utilizes three pairs of Helmholtz coils to generate a magnetic 
                 field that is uniform in the center of the cage. This magnetic field is used to simulate the 
