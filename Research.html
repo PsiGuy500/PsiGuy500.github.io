@@ -143,10 +143,21 @@
                 The first project that I worked on while on the Orbital Determination sub-team was to write a report to
                 the Canadian government in order to prove that our CubeSat would decay back to Earth within 25 years. 
                 Using STK (Systems Tool Kit), I simulated the orbit of our CubeSat in a variety of different 
-                circumstances taking into account the weight, dimensions, and drag coefficient of the CubeSat as well as 
+                circumstances taking into account the altitude, weight, dimensions, and drag coefficient of the CubeSat as well as 
                 the atmospheric and solar models and orbital proragator of the CubeSat. With another team member who 
                 performed the simulations using GMAT (General Mission Analysis Tool), we recorded the results and
-                submitted them to the Canadian government for approval, which we received.
+                submitted them to the Canadian government for approval, which we received. After working on the
+                report, I also contributed to the development of a program that would be used to predict the orbit of
+                the satellite using TLE (Two Line Element) data provided by the Canadian government. The final result 
+                was a Python program that, when given the altitude, latitude, longitude, and time of two points of a satellite's
+                orbit, used the TLE data of the satellite to predict the position of the satellite sometime in the 
+                future within an accuracy of 10 km or below. As long as the TLE was updated every few weeks (two weeks was
+                recommended to be safe), the program did not produce a large error. Prior to the development 
+                of the final program, I created several trial programs in MATLAB to test a variety of orbital algorithms
+                in order to find the optimal algorithm. For the final program, I read parts of several Masters theses and 
+                often consulted an orbital mechanics textbook for reference (the textbook that I used was 
+                <i>Orbital Mechanics for Engineering Students</i> by Howard D. Curtis) where I learned about
+                fascinating concepts such as Gibbs' method and Lambert's theorem (both in Ch.5).
             </p>
             <p>
                 After working in the orbital determination team, I briefly switched to the Command and Data Handling sub-team. 
@@ -158,8 +169,13 @@
                 The final team that I worked on was in the Attitude Determination and Control System (ADCS) sub-team, 
                 which was my personal favourite due to physics and expiremental nature of the work as well as the
                 collaboration involved. The first task that I worked on was contributing to the development, building, 
-                and testing of a 
-                helmhltoz cage for our satellite. 
+                and testing of a Helmhlotz cage for our satellite. For reference, a Helmholtz coil is a pair 
+                of two electromagnets on the same axis each with identical currents (same magnitude and direction) 
+                separated by a distance of \(R\) where \(R\) is the radius of the coil. A Helmholtz cage
+                is a device that utilizes three pairs of Helmholtz coils to generate a magnetic 
+                field that is uniform in the center of the cage. This magnetic field is used to simulate the 
+                Earth's magnetic field in order to test the magnetorquers, devices which are used to control 
+                the orientation of the CubeSat.
         </li>
     </ul>
     </div>
