@@ -78,8 +78,8 @@
                 <i>Mario Kart</i>. The competition was as follows; For a set period of time,
                 two robots would race around a track and have the option to pick up blocks. Three points would be awarded
                 for each lap completed and one point for each block that was picked up and the robot with the most points at the end
-                would be the winner of the round. There were also magnetic "bombs" around the track. A diagram of the track 
-                as well as the path our robot took is shown below:
+                would be the winner of the round. There were also magnetic "bombs"  in the shape of cubes around the track. 
+                A diagram of the track as well as the path our robot took is shown below:
             </p>
             <p>
                 <img src = "Images/MarioKartLap.png" alt="Mario Kart Robot" width="500" height="500">
@@ -105,7 +105,7 @@
                 of the beacon detector, the closer the beacon detector was to the beacon, the higher the 
                 voltage signal. Once the voltage signal was high enough, the robot would then turn towards 
                 the beacon and go straight torwards it until the voltage signal reached a limit. 
-                By that point, the robot switche to the tape tracker to follow the track.
+                By that point, the robot switched to the tape tracker to follow the track.
             </p>
             <p>
                 <img src = "Images/BeaconDetector.png" alt="Mario Kart Robot" width="500" height="500">
@@ -130,16 +130,29 @@
                 various components of the robot.
             </p>
             <p>
-                6) The IMU was used to detect the or
+                6) The IMU was used to detect the orientation of the robot with respected to the ground. Specifically, our robot
+                had to jump off an edge and land in a pile of rocks and then turn around and drive torwards the IR beacon. The IMU 
+                was specifically used the detect the change in angle of the robot as it turned around to make sure it did not 
+                overshoot. Another use of the IMU was to change the angle of the robot 90 degrees to the left or right depending on
+                the starting orientation of the robot, as all robots started facing 90 degrees from the IR beacon and we needed ours 
+                to face the beacon before it started to drive torwards it.
             </p>
             <p>
-                <img src = "Images/HBridge.png" alt="Mario Kart Robot" width="500" height="500">
-                <img src = "Images/BeaconDetector.png" alt="Mario Kart Robot" width="500" height="500">
-            </p>
-            <p>
-                <img src = "Images/TapeTracker.png" alt="Mario Kart Robot" width="500" height="500">
                 <img src = "Images/IMUSchematic.png" alt="Mario Kart Robot" width="500" height="500">
+            <p>
+                7) The hall effect sensor was used to detect the magnetic "bombs" on the track. The hall effect sensor would detect
+                the magnetic field of the bomb and then send a signal to the robot to temporarily slow down and casually push the 
+                magnetic bombs to the side (teams were only penalized if the magnetic bombs flipped on their side). However, due to 
+                our foam barrier at the front of our robot, we were able to push the bombs to the side without them flipping over without 
+                needing to reduce our speed.
             </p>
+            <p>
+                A picture of the final robot is shown below:
+            </p>
+            <p>
+                <img src = "Images/mariokartRobot.jpg" alt="Mario Kart Robot" width="500" height="500">
+            </p>
+            
             
         </li>
     </ul>
