@@ -69,7 +69,7 @@
                 to navigate the course, we applied a filter to the camera of the robot and then utilized a PID controller
                 based on the output of the filter. In order to read the signs, we used a convolutional neural network. 
             </p>
-            <p><embed src="List of Projects/ENPH353_Report.pdf" width="700" height="550" type="application/pdf"></p>
+            <p><embed src="List of Projects/ENPH353_Report.pdf" width="500" height="500" type="application/pdf"></p>
         </li>
         <li>
             <p><b>Mario Kart Robot</b><p>
@@ -85,9 +85,52 @@
                 <img src = "Images/MarioKartLap.png" alt="Mario Kart Robot" width="500" height="500">
             </p>
             <p>
-                Some of the features of our robot included an IR beacon detector in order for our robot to cut through the 
-                rocks, a tape tracker which utilizes a PID algorithm to follow, and an H-bridge to obtain the correct 
-                voltage to power our motor. 
+                Our robot included may features such as a tape tracker, a beacon detector, an H-bridge, an 
+                opto-isolated servo, a power system as well as regulators, and IMU, and a hall effect sensor. 
+            </p>
+            <p>
+                1) The tape tracker utilized infrared reflectance sensors to detect the tape on the track by 
+                measuring the amount of light reflected back to the sensor (the track was white and the tape
+                was black). This light signal was then converted to a voltage signal. The voltage signal 
+                was then fed into a PID controller which would then
+                be used to steer the robot. 
+            </p>
+            <p>
+                <img src = "Images/TapeTracker.png" alt="Mario Kart Robot" width="500" height="500">
+            </p>
+            <p>
+                2) The beacon detector utilized a phototransistor to detect the IR signal from the beacon. 
+                The beacon emitted an IR signal that was modulated at 1 kHz. The phototransistor would then detect
+                the intensity of the IR signal and convert it to a voltage signal. Along with the relative orientation
+                of the beacon detector, the closer the beacon detector was to the beacon, the higher the 
+                voltage signal. Once the voltage signal was high enough, the robot would then turn towards 
+                the beacon and go straight torwards it until the voltage signal reached a limit. 
+                By that point, the robot switche to the tape tracker to follow the track.
+            </p>
+            <p>
+                <img src = "Images/BeaconDetector.png" alt="Mario Kart Robot" width="500" height="500">
+            </p>
+            <p>
+                3) The H-bridge, which was controlled by a PWM signal, was used to control the speed of the motor as 
+                well as the polarity (polarity changes allow changes in the motors rotation direction). The H-bridge was 
+                especially useful for making sharp turns as sudden changes in the motor's rotation direction and speed 
+                were necessary. 
+            <p>
+            <p>
+                <img src = "Images/HBridge.png" alt="Mario Kart Robot" width="500" height="500">
+            </p>    
+            <p>
+                4) The opto-isolated servo was used to control the steering of the robot. The servo was controlled by a PWM signal
+                which would then be used to control the angle of the servo. The servo was opto-isolated to prevent any
+                electrical noise from the motor from affecting the servo.
+            </p>
+            <p>
+                5) The power system consisted of several 15V batteries that were used to power the robot. The regulators were
+                used to convert the 15V signals to signals of lower voltage (such as 5V and 3.3V) that were used to power the 
+                various components of the robot.
+            </p>
+            <p>
+                6) The IMU was used to detect the 
             </p>
             <p>
                 <img src = "Images/HBridge.png" alt="Mario Kart Robot" width="500" height="500">
@@ -103,9 +146,6 @@
             <p><b>Photonic Rotor speed controller</b><p>
             <p>
                 For this project, I built a photonic rotor speed controller. 
-            </p>
-            <p>
-                <embed src = "ENPH259Final.pdf" alt="Photonic Rotor" width="500" height="500">
             </p>
         </li>
     </ul>
