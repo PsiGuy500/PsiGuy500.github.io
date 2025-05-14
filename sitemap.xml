@@ -32,6 +32,11 @@
   <lastmod>2024-08-16T21:34:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://psiguy500.github.io/Interests.html</loc>
+  <lastmod>2024-08-22T00:00:00+00:00</lastmod> <!-- use UTC date you last touched the file -->
+  <priority>0.80</priority>                     <!-- any value 0.00 – 1.00 or omit -->
+</url>
 
 
 </urlset>
