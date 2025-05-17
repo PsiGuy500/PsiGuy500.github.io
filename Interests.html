@@ -46,10 +46,51 @@
             the principles of nuclear physics and the potential for manipulating matter at the atomic level.
         </p>
         <p>
-            Lets say we have a lead pellet (Pb-208) that is 2 cm thick with a diameter of 4 cm. We want to
-            bombard it with protons to transmute it into gold (Au-197). The prton beam has a current of \(100 \mu A)\\. 
-            The lead pellet is bombarded with protons,
-            We want (\{Pb}_{82}^{208}\) to become \{Au}_{79}^{197}\.
+            Let’s say we have a lead pellet (Pb‑208) that is 2&nbsp;cm thick with a diameter of 4&nbsp;cm. We want to
+            bombard it with protons to transmute it into gold (Au‑197). The proton beam has a current 
+            of \(100\,\mu\text{A}\) and an energy of 1&nbsp;GeV. Let’s also assume that the entire beam is absorbed by the
+            lead pellet. The lead pellet has a density of \(11.34\,\text{g\,cm}^{-3}\) and a molar mass of \(207.2\,\text{g\,mol}^{-1}\).
+            We want \(\mathrm{^{208}_{\;82}Pb}\) to become \(\mathrm{^{197}_{\;79}Au}.\)
+        </p>
+        <p>
+            The desired mass of gold is
+            \[
+              m_{\!Au}=0.1\;\text{ozt}=0.1\times31.1035\;\text{g}=3.11035\;\text{g}.
+            \]
+            Converting this mass to a number of atoms gives
+            \[
+              N_{\!Au}=\frac{m_{\!Au}}{M_{Au}}N_{A}=\frac{m_{\!Au}}{197\;\text{g mol}^{-1}}\,N_{A},
+            \]
+            where \(M_{Au}\) is the molar mass of gold and \(N_{A}\) is Avogadro’s constant.
+        </p>
+        <p>
+            A 1&nbsp;GeV proton beam with current \(I=100\,\mu\text{A}\) delivers a proton flux of
+            \[
+              \dot N_{p}=\frac{I}{e}=\frac{100\times10^{-6}\;\text{C s}^{-1}}{1.602\times10^{-19}\;\text{C}}=6.24\times10^{14}\;\text{p s}^{-1},
+            \]
+            where \(e\) is the elementary charge.citeturn5file0
+        </p>
+        <p>
+            Assuming the beam is fully stopped in the 2&nbsp;cm thick pellet, the areal density of target nuclei is
+            \[
+              n_{t}=\frac{\rho_{Pb}\,t}{M_{Pb}}N_{A},
+            \]
+            with \(\rho_{Pb}\) the density of lead, \(t\) the target thickness, and \(M_{Pb}\) the molar mass of lead.
+        </p>
+        <p>
+            The production rate of \(^\text{197}\!\text{Au}\) through the direct reaction
+            \(^{208}\!\text{Pb}(p,4p8n)^{197}\!\text{Au}\) is then
+            \[
+              \dot N_{Au}=\dot N_{p}\,n_{t}\,\sigma_{(p,4p8n)},
+            \]
+            where \(\sigma_{(p,4p8n)}\) is the reaction cross‑section at 1&nbsp;GeV.
+        </p>
+        <p>
+            Finally, the irradiation time required to accumulate the desired number of gold atoms is
+            \[
+              t_{\text{irr}}=\frac{N_{Au}}{\dot N_{Au}}=\frac{m_{\!Au}\,M_{Pb}}{M_{Au}\,\rho_{Pb}\,t\,\sigma_{(p,4p8n)}}\,\frac{1}{\dot N_{p}}\,N_{A}.
+            \]
+            This expression links the beam parameters, target properties, reaction cross‑section, and the desired mass of gold.
         </p>
 
         <!-- Section 1.2 -->
