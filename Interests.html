@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interesting Things</title>
+    <title>Interesting Things – Numerical version</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async
@@ -38,80 +38,71 @@
             The idea of turning lead into gold has fascinated alchemists and scientists for centuries. 
             While it is not feasible to do this through traditional alchemical methods, modern nuclear 
             physics has made it possible to transmute elements. This process involves bombarding lead with 
-            high-energy particles, causing it to lose protons and neutrons, ultimately transforming it into gold.
+            high‑energy particles, causing it to lose protons and neutrons, ultimately transforming it into gold.
         </p>
         <p>
-            The process is not practical for large-scale production of gold due to the immense energy 
+            The process is not practical for large‑scale production of gold due to the immense energy 
             required and the low yield of gold produced. However, it serves as a fascinating example of 
             the principles of nuclear physics and the potential for manipulating matter at the atomic level.
         </p>
         <p>
-            Let’s say we have a lead pellet (Pb‑208) that is 2&nbsp;cm thick with a diameter of 4&nbsp;cm. We want to
-            bombard it with protons to transmute it into gold (Au‑197). The proton beam has a current 
-            of \(100\,\mu\text{A}\) and an energy of 1&nbsp;GeV. Let’s also assume that the entire beam is absorbed by the
-            lead pellet. For reference, the lead pellet has a density of \(\rho_{Pb} = 11.34\,\text{g cm}^{-3}\) and 
-            a molar mass of \(M_{Pb} = 207.2\,\text{g mol}^{-1}\). We would like to know how long we need to irradiate
-            the lead pellet to produce \(0.1\;\text{ozt}\) of gold.
+            Suppose we have a lead pellet (Pb‑208) that is <strong>2&nbsp;cm</strong> thick with a diameter of <strong>4&nbsp;cm</strong>. We bombard it with 
+            protons to transmute it into gold (Au‑197). The proton beam has a current of <strong>100&nbsp;µA</strong> and an energy of 
+            1&nbsp;GeV, and we assume the beam is entirely absorbed in the pellet. The lead density is 
+            <strong>11.34&nbsp;g cm<sup>−3</sup></strong> and its molar mass is <strong>207.2&nbsp;g mol<sup>−1</sup></strong>. We want to know how long to irradiate the pellet to 
+            obtain <strong>0.1&nbsp;ozt</strong> (troy ounce) of gold.
         </p>
-        <p>
-            The reaction we are interested in is:
-        </p>
-        <p>
+        <p>The reaction is written as</p>
+        <p style="text-align:center">p + <sup>208</sup><sub>82</sub>Pb → <sup>197</sup><sub>79</sub>Au + 4 p + 8 n</p>
+        <p>or, compactly, <sup>208</sup><sub>82</sub>Pb(p,4p8n)<sup>197</sup><sub>79</sub>Au.</p>
 
-            p + <sup>208</sup><sub>82</sub>Pb → <sup>197</sup><sub>79</sub>Au + 4p + 8n
-
-        </p>
+        <h3>Numerical evaluation</h3>
         <p>
-            This can be written in a more compact form as:
-        </p>
-        <p> 
-            <span><sup>208</sup><sub>82</sub>Pb</span> (p, 4p + 8n) <span><sup>197</sup><sub>79</sub>Au</span>
-            
-        </p>
-        <p>
-
-            This means that when a proton collides with a lead nucleus, it ejects 4 protons and 8 neutrons, 
-            resulting in the formation of gold. Notice the 1:1 ratio of gold atoms produced per reactant proton.
-        </p>
-
-            The desired mass of gold we want to produce is:
+            Desired gold mass:
             \[
-              m_{\!Au}=0.1\;\text{ozt}=0.1\times31.1035\;\text{g}=3.11035\;\text{g}.
+              m_{Au}=0.1\,\text{ozt}=0.1\times31.1035\,\text{g}=\mathbf{3.11035\;g}.
             \]
-            Converting this mass to a number of atoms gives
+            Number of Au‑197 atoms required:
             \[
-              N_{\!Au}=\frac{m_{\!Au}}{M_{Au}}N_{A}=\frac{m_{\!Au}}{197\;\text{g mol}^{-1}}\,N_{A},
+              N_{Au}=\frac{m_{Au}}{M_{Au}}N_{A}=\frac{3.11035\,\text{g}}{197\,\text{g mol}^{-1}}\,(6.022\times10^{23}\,\text{mol}^{-1})
+              =\mathbf{9.51\times10^{21}\;\text{atoms}}.
             \]
-            where \(M_{Au}\) is the molar mass of gold and \(N_{A}\) is Avogadro’s constant.
         </p>
         <p>
-            A 1&nbsp;GeV proton beam with current \(I=100\,\mu\text{A}\) delivers a proton flux of
+            Proton flux for a 100 µA beam:
             \[
-              \dot N_{p}=\frac{I}{e}=\frac{100\times10^{-6}\;\text{C s}^{-1}}{1.602\times10^{-19}\;\text{C}}=6.24\times10^{14}\;\text{p s}^{-1},
+              \dot N_{p}=\frac{I}{e}=\frac{1.00\times10^{-4}\,\text{C s}^{-1}}{1.602\times10^{-19}\,\text{C}}
+              =\mathbf{6.24\times10^{14}\;\text{p s}^{-1}}.
             \]
-            where \(e\) is the elementary charge.
         </p>
         <p>
-            Assuming the beam is fully stopped in the 2&nbsp;cm thick pellet, the areal density of target nuclei is
+            Areal density of Pb‑208 target nuclei (pellet thickness <em>t</em>=2 cm):
             \[
-              n_{t}=\frac{\rho_{Pb}\,t}{M_{Pb}}N_{A},
+              n_{t}=\frac{\rho_{Pb}\,t}{M_{Pb}}N_{A}=\frac{11.34\,\text{g cm}^{-3}\times2\,\text{cm}}{207.2\,\text{g mol}^{-1}}
+              \,(6.022\times10^{23}\,\text{mol}^{-1})=\mathbf{6.59\times10^{22}\;\text{cm}^{-2}}.
             \]
-            with \(\rho_{Pb}\) the density of lead, \(t\) the target thickness, and \(M_{Pb}\) the molar mass of lead.
         </p>
         <p>
-            The production rate of \(^\text{197}\!\text{Au}\) through the direct reaction
-            \(^{208}\!\text{Pb}(p,4p8n)^{197}\!\text{Au}\) is then
+            Production rate of Au‑197 via the direct channel is
             \[
               \dot N_{Au}=\dot N_{p}\,n_{t}\,\sigma_{(p,4p8n)},
             \]
-            where \(\sigma_{(p,4p8n)}\) is the reaction cross‑section at 1&nbsp;GeV.
+            so that the irradiation time becomes
+            \[
+              t_{irr}=\frac{N_{Au}}{\dot N_{Au}}=
+              \frac{9.51\times10^{21}}{6.24\times10^{14}\,\times6.59\times10^{22}\,\times\sigma}\;\text{s}
+              \;=\;\frac{2.31\times10^{-16}}{\sigma}\;\text{s},
+            \]
+            where \(\sigma\) is the reaction cross‑section in cm<sup>2</sup>.
         </p>
         <p>
-            Finally, the irradiation time required to accumulate the desired number of gold atoms is
+            <em>Example.</em> If the direct cross‑section at 1 GeV is, say, 1 millibarn \((1\,\text{mb}=1.0\times10^{-27}\,\text{cm}^2)\),
+            then
             \[
-              t_{\text{irr}}=\frac{N_{Au}}{\dot N_{Au}}=\frac{m_{\!Au}\,M_{Pb}}{M_{Au}\,\rho_{Pb}\,t\,\sigma_{(p,4p8n)}}\,\frac{1}{\dot N_{p}}\,N_{A}.
+              t_{irr}=\frac{2.31\times10^{-16}}{1.0\times10^{-27}}\;\text{s}\approx2.3\times10^{11}\,\text{s}\;\approx7.3\times10^{3}\,\text{years}.
             \]
-            This expression links the beam parameters, target properties, reaction cross‑section, and the desired mass of gold.
+            Even for a ten‑times larger cross‑section of 10 mb the time would still be of order centuries,
+            illustrating why proton‑driven transmutation is not a commercially viable path to gold.
         </p>
 
         <!-- Section 1.2 -->
