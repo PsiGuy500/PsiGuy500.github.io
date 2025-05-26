@@ -54,29 +54,32 @@
         </p>
         <p>The reaction is written as</p>
         <p style="text-align:center">p + <sup>208</sup><sub>82</sub>Pb → <sup>197</sup><sub>79</sub>Au + 4 p + 8 n</p>
-        <p>or, compactly, <sup>208</sup><sub>82</sub>Pb(p,4p8n)<sup>197</sup><sub>79</sub>Au.</p>
+        <p>or, compactly, <sup>208</sup><sub>82</sub>Pb(p,4p+8n)<sup>197</sup><sub>79</sub>Au.</p>
 
         <h3>Numerical evaluation</h3>
         <p>
-            Desired gold mass:
+            The first step would be to find the desired gold mass in grams (g) so that everything is in SI units:
             \[
               m_{Au}=0.1\,\text{ozt}=0.1\times31.1035\,\text{g}=\mathbf{3.11035\;g}.
             \]
-            Number of Au‑197 atoms required:
+            If we want to transform the lead into gold, the number of Au‑197 atoms that would be produced is:
             \[
               N_{Au}=\frac{m_{Au}}{M_{Au}}N_{A}=\frac{3.11035\,\text{g}}{197\,\text{g mol}^{-1}}\,(6.022\times10^{23}\,\text{mol}^{-1})
               =\mathbf{9.51\times10^{21}\;\text{atoms}}.
             \]
         </p>
         <p>
-            Proton flux for a 100 µA beam:
+            Notice that in the equation for the nuclear reaction above, 1 Au atom gets produced for 1 proton striking 1 Pb atom.
+            Ergo, it will be useful for us to know the proton flux for the 100 µA beam, which is the number of protons per second
+            striking the target. The current \(I\) in amperes (A) is defined as the charge per second:
             \[
               \dot N_{p}=\frac{I}{e}=\frac{1.00\times10^{-4}\,\text{C s}^{-1}}{1.602\times10^{-19}\,\text{C}}
               =\mathbf{6.24\times10^{14}\;\text{p s}^{-1}}.
             \]
         </p>
         <p>
-            Areal density of Pb‑208 target nuclei (pellet thickness <em>t</em>=2 cm):
+            Since the proton beam is striking the surface of the target, it is crucial to know the surface density, or areal 
+            density, of the Pb‑208 target nuclei (pellet thickness <em>t</em>=2 cm):
             \[
               n_{t}=\frac{\rho_{Pb}\,t}{M_{Pb}}N_{A}=\frac{11.34\,\text{g cm}^{-3}\times2\,\text{cm}}{207.2\,\text{g mol}^{-1}}
               \,(6.022\times10^{23}\,\text{mol}^{-1})=\mathbf{6.59\times10^{22}\;\text{cm}^{-2}}.
@@ -119,6 +122,8 @@
             uncertainties below 10<sup>-19</sup>.  Recent experiments have narrowed the nuclear linewidth to the ~100 Hz range and 
             measured the transition frequency to the kilohertz level, bringing a working thorium nuclear optical clock—and 
             applications from relativistic geodesy to tests of fundamental constants—within reach.
+
+            TBD.
         </p>
 
     </div>
