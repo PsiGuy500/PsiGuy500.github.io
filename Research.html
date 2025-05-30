@@ -37,8 +37,8 @@
             <p>This summary covers May – August 2025 work on modelling a fibre-delay opto-electronic oscillator (OEO) 
                 that functions both as a low-noise microwave source and as a physical reservoir for machine-learning tasks.</p> 
 
-            <p>The feedback loop—nonlinear Mach-Zehnder modulation, fibre delay \(\tau\), photo-detection with 
-                small-signal gain \(\beta\), and a narrow-band RF filter of inverse operator \(\hat H\)—reduces 
+            <p>The feedback loop—nonlinear Mach-Zehnder modulation, fibre delay \(\tau\), small-signal amplification \(\beta\), 
+                and a narrow-band RF filter of inverse operator \(\hat H\)—reduces 
                 to the Ikeda-type delay-differential equation</p> 
 
             <p style="text-align:center;">\[ \hat H\bigl[x(t)\bigr]=\beta\,f_{\text{NL}}\!\bigl[x(t-\tau)\bigr]. \]</p> 
@@ -46,10 +46,10 @@
             <p>A MATLAB script implements every block explicitly: MZM intensity law 
                 \(I_\text{out}=\cos^{2}\!\bigl[\tfrac{\pi}{2V_{\pi}}\,v+\phi_\text{bias}\bigr]\), 
                 a circular-buffer fibre delay, soft-limiting RF gain, and a base-band Butterworth filter 
-                whose bandwidth \(B=f_{\mathrm{c}}/Q\) is adjustable. Iterating this chain with small 
+                whose bandwidth \(BW=f_{\mathrm{c}}/Q\) is adjustable. Iterating this chain with small 
                 Gaussian noise resolves start-up transients and captures steady-state behaviour.</p> 
             
-            <p>Sweeping \(V_{\pi}\) and \(B\) reveals four regimes—quiescent, periodic, quasi-periodic, and 
+            <p>Sweeping \(V_{\pi}\) and \(BW\) reveals four regimes—quiescent, periodic, quasi-periodic, and 
                 chaotic—mirroring classic Ikeda bifurcations. Treating one round trip as a nonlinear
                 kernel turns the oscillator into a reservoir computer: feeding input sequences \(X\) yields 
                 hidden states \(H=f(X)\), and a single linear solve \(W^{\!\top}=O\,H^{+}\) gives optimal 
