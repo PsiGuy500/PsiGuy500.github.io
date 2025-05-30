@@ -33,6 +33,31 @@
                 in <a href="https://mpl.mpg.de/research-at-mpl/independent-research-groups/quantum-optoacoustics">Birgit Stiller's group</a> 
                 at the Max Planck Institute of Light. A report (currently in progress) is posted below.
             </p>
+
+            <p>This summary covers May – August 2025 work on modelling a fibre-delay opto-electronic oscillator (OEO) 
+                that functions both as a low-noise microwave source and as a physical reservoir for machine-learning tasks.</p> 
+
+            <p>The feedback loop—nonlinear Mach-Zehnder modulation, fibre delay \(\tau\), photo-detection with 
+                small-signal gain \(\beta\), and a narrow-band RF filter of inverse operator \(\hat H\)—reduces 
+                to the Ikeda-type delay-differential equation</p> 
+
+            <p style="text-align:center;">\[ \hat H\bigl[x(t)\bigr]=\beta\,f_{\text{NL}}\!\bigl[x(t-\tau)\bigr]. \]</p> 
+
+            <p>A MATLAB script implements every block explicitly: MZM intensity law 
+                \(I_\text{out}=\cos^{2}\!\bigl[\tfrac{\pi}{2V_{\pi}}\,v+\phi_\text{bias}\bigr]\), 
+                a circular-buffer fibre delay, soft-limiting RF gain, and a base-band Butterworth filter 
+                whose bandwidth \(B=f_{\mathrm{c}}/Q\) is adjustable. Iterating this chain with small 
+                Gaussian noise resolves start-up transients and captures steady-state behaviour.</p> 
+            
+            <p>Sweeping \(V_{\pi}\) and \(B\) reveals four regimes—quiescent, periodic, quasi-periodic, and 
+                chaotic—mirroring classic Ikeda bifurcations. Treating one round trip as a nonlinear
+                kernel turns the oscillator into a reservoir computer: feeding input sequences \(X\) yields 
+                hidden states \(H=f(X)\), and a single linear solve \(W^{\!\top}=O\,H^{+}\) gives optimal 
+                read-out weights, achieving accurate classification without back-propagation.</p> 
+            
+            <p>The model reproduces known OEO dynamics and offers a tunable platform for further 
+                reservoir-computing experiments, including multi-tone injection for higher-dimensional tasks.</p>
+        
             <p><embed src="MPL Work Report.pdf" width="700" height="550" type="application/pdf"></p>
         </li>
         <li>
