@@ -52,7 +52,8 @@
             <p>Sweeping \(V_{\pi}\) and \(BW\) reveals four regimes—quiescent, periodic, quasi-periodic, and 
                 chaotic—mirroring classic Ikeda bifurcations. Treating one round trip as a nonlinear
                 kernel turns the oscillator into a reservoir computer: feeding input sequences \(X\) yields 
-                hidden states \(H=f(X)\), and a single linear solve \(W^{\!\top}=O\,H^{+}\) gives optimal 
+                hidden states \(H=f(X)\), and a single linear solve \(W^{\!\top}=O\,H^{-1}\) (where \O\ is the output
+                matrix which gives a classification scheme for our system) gives optimal 
                 read-out weights, achieving accurate classification without back-propagation.</p> 
             
             <p>The model reproduces known OEO dynamics and offers a tunable platform for further 
