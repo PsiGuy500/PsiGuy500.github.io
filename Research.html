@@ -34,7 +34,7 @@
                 at the Max Planck Institute of Light. 
             </p>
 
-            <p>This summary covers May – August 2025 work on modelling a fibre-delay opto-electronic oscillator (OEO) 
+            <p>This summary covers May – August 2025 work on modelling an opto-electronic oscillator (OEO) 
                 that functions both as a low-noise microwave source and as a physical reservoir for machine-learning tasks.
                 The OEO that I used is the Ikeda oscillator, a nonlinear feedback system that exhibits rich dynamics,
                 including periodic, quasi-periodic, and chaotic behaviour. A picture of the Ikeda oscillator (source of which can
@@ -61,14 +61,11 @@
                 Gaussian noise resolves start-up transients and captures steady-state behaviour.</p> 
             
             <p>Sweeping \(V_{\pi}\) and \(BW\) reveals four regimes—quiescent, periodic, quasi-periodic, and 
-                chaotic—mirroring classic Ikeda bifurcations. Treating one round trip as a nonlinear
-                kernel turns the oscillator into a reservoir computer: feeding input sequences \(X\) yields 
-                hidden states \(H=f(X)\), and a single linear solve \(W^{\!\top}=O\,H^{-1}\) (where \(O\) is the output
-                matrix which gives a classification scheme for our system) gives optimal 
-                read-out weights, achieving accurate classification without back-propagation.</p> 
+                chaotic—mirroring classic Ikeda bifurcations. Utilizing the behaviour of the OEO allows us 
+                to simulate the behaviour of a Neural Network without back propagation</p> 
             
             <p>The model reproduces known OEO dynamics and offers a tunable platform for further 
-                reservoir-computing experiments, including multi-tone injection for higher-dimensional tasks.</p>
+                reservoir-computing experiments.</p>
         </li>
         <li>
             <a href="https://soc.ece.ubc.ca/">System-on-a-Chip Lab at UBC</a>
