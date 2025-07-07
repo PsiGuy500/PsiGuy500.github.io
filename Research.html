@@ -54,10 +54,8 @@
             
             <img src="Images/1-IkedaBlock.png" alt="Ikeda block diagram" width="400" height="150">
             
-            <p>A MATLAB script implements every block explicitly: MZM intensity law 
-                \(I_\text{out}=\cos^{2}\!\bigl[\tfrac{\pi}{2V_{\pi}}\,v+\phi_\text{bias}\bigr]\), 
-                a circular-buffer fibre delay, soft-limiting RF gain, and a base-band Butterworth filter 
-                whose bandwidth \(BW=f_{\mathrm{c}}/Q\) is adjustable. Iterating this chain with small 
+            <p>A MATLAB script implements every block explicitly: MZM intensity law, 
+                a delay, gain, and a band-pass filter whose bandwidth is adjustable. Iterating this chain with small 
                 Gaussian noise resolves start-up transients and captures steady-state behaviour.</p> 
             
             <p>Sweeping \(V_{\pi}\) and \(BW\) reveals four regimes—quiescent, periodic, quasi-periodic, and 
