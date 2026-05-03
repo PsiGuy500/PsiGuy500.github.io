@@ -38,8 +38,9 @@
         <p>
             The idea of turning lead into gold has fascinated alchemists and scientists for centuries. 
             While it is not feasible to do this through traditional alchemical methods, modern nuclear 
-            physics has made it possible to transmute elements. This process involves bombarding lead with 
-            high‑energy particles, causing it to lose protons and neutrons, ultimately transforming it into gold.
+            physics has made it possible to transmute elements. This is a nuclear transmutation process: 
+            a high‑energy particle can drive many possible reaction channels, and one of those channels 
+            can turn lead into gold.
         </p>
         <p>
             The process is not practical for large‑scale production of gold due to the immense energy 
@@ -49,7 +50,8 @@
         <p>
             Suppose we have a lead pellet (Pb‑208) that is <strong>2&nbsp;cm</strong> thick with a diameter of <strong>4&nbsp;cm</strong>. We bombard it with 
             protons to transmute it into gold (Au‑197). The proton beam has a current of <strong>100&nbsp;µA</strong> and an energy of 
-            1&nbsp;GeV, and we assume the beam is entirely absorbed in the pellet. The lead density is 
+            1&nbsp;GeV, and for a simplified estimate we only use the incident proton flux and the target areal 
+            density rather than modeling how much of the beam actually stops in 2&nbsp;cm of lead. The lead density is 
             <strong>11.34&nbsp;g cm<sup>−3</sup></strong> and its molar mass is <strong>207.2&nbsp;g mol<sup>−1</sup></strong>. We want to know how long to irradiate the pellet to 
             obtain <strong>0.1&nbsp;ozt</strong> (troy ounce) of gold.
         </p>
@@ -70,7 +72,7 @@
             \]
         </p>
         <p>
-            Notice that in the equation for the nuclear reaction above, 1 Au atom gets produced for 1 proton striking 1 Pb atom.
+            For each successful \((p,4p8n)\) reaction event, one Au‑197 nucleus is produced. However, only a tiny fraction of incident protons will cause this specific reaction, which is why the reaction cross‑section must be included.
             Ergo, it will be useful for us to know the proton flux for the 100 µA beam, which is the number of protons per second
             striking the target. The current \(I\) in amperes (A) is defined as the charge per second:
             \[
@@ -97,7 +99,7 @@
               \frac{9.51\times10^{21}}{6.24\times10^{14}\,\times6.59\times10^{22}\,\times\sigma}\;\text{s}
               \;=\;\frac{2.31\times10^{-16}}{\sigma}\;\text{s},
             \]
-            where \(\sigma\) is the reaction cross‑section in cm<sup>2</sup>.
+            where \(\sigma\) is the reaction cross‑section in cm<sup>2</sup>. It is the cross‑section for this specific direct reaction channel, not for every proton‑lead interaction.
         </p>
         <p>
             <em>Example.</em> If the direct cross‑section at 1 GeV is, say, 1 millibarn \((1\,\text{mb}=1.0\times10^{-27}\,\text{cm}^2)\),
@@ -106,7 +108,10 @@
               t_{irr}=\frac{2.31\times10^{-16}}{1.0\times10^{-27}}\;\text{s}\approx2.3\times10^{11}\,\text{s}\;\approx7.3\times10^{3}\,\text{years}.
             \]
             Even for a ten‑times larger cross‑section of 10 mb the time would still be of order centuries,
-            illustrating why proton‑driven transmutation is not a commercially viable path to gold.
+            illustrating why proton‑driven transmutation is not a commercially viable path to gold. A real
+            1 GeV proton‑on‑lead target would also produce many other nuclear fragments, secondary particles,
+            radioactive products, and heat, so treat this as a simplified order‑of‑magnitude estimate rather
+            than a complete target model.
         </p>
 
         <!-- Section 1.2 -->
