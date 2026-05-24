@@ -27,6 +27,58 @@
     <div class="text-container">
     <ul>
         <li>
+            <section>
+                <h2><a href="https://engineering.ubc.ca/spotlight/research-in-action/interested-in-autonomous-robots-youll-want-to-meet-dr-cyrus-neary">AIRE Lab</a></h2>
+                <p>
+                    My summer project is about building a feedback-control system for an optical setup whose output
+                    intensity pattern changes over time because the medium drifts. The goal is to maintain a desired
+                    target intensity pattern at the detector plane. A Gaussian beam is phase-shaped by an SLM, passes
+                    through a drifting medium, propagates to a detector, and is corrected using feedback, and the
+                    controller only sees detector intensity images, not the hidden phase screen or complex optical field.
+                </p>
+                <p>
+                    The physical idea is that thermal or environmental drift changes the refractive index of the medium,
+                    which introduces a phase perturbation on the beam. After propagation, that phase perturbation changes
+                    the interference pattern at the detector. In compact form, the chain is: thermal drift
+                    -&gt; \(\Delta n(\mathbf{r},t)\) -&gt; \(\Delta \phi(x,y,t)\) -&gt; interference change -&gt; \(I(x,y,t)\) drift.
+                </p>
+                <p>
+                    In Part 1, I simplify the medium as an effective drifting phase screen \(\psi(x,y,t)\). This is not
+                    the final physical thermo-optical model; it is a controlled approximation used to test whether the
+                    RL-CNN controller can learn useful SLM corrections from intensity feedback. Later, this can be
+                    replaced by a more physically grounded heat-equation or thermo-optic model.
+                </p>
+                <p>
+                    The RL-CNN controller normalizes the detector image and compares it with the target image. The
+                    residual image is \(e_t(x,y)=\tilde{I}_t(x,y)-\tilde{I}_{\text{target}}(x,y)\). A short stack of
+                    recent residual images is passed into a CNN, which extracts spatial features from the error pattern.
+                    A PPO-based RL policy uses those features to output modal coefficients for an SLM phase correction.
+                    The SLM phase update is \(\Delta \phi_{\text{SLM}}(x,y,t)=\sum_m c_m(t) Z_m(x,y)\), and the SLM is
+                    updated incrementally as \(\phi_{\text{SLM}}(x,y,t+1)=\phi_{\text{SLM}}(x,y,t)+\Delta \phi_{\text{SLM}}(x,y,t)\).
+                </p>
+                <h3>Step-by-step system process</h3>
+                <ol>
+                    <li>Define the Gaussian input beam.</li>
+                    <li>Apply the SLM phase pattern.</li>
+                    <li>Apply the drifting medium / phase screen.</li>
+                    <li>Propagate the field to the detector plane.</li>
+                    <li>Measure the detector intensity.</li>
+                    <li>Compare the measured image with the target image.</li>
+                    <li>Form a residual image.</li>
+                    <li>Stack recent residual images.</li>
+                    <li>Pass the residual stack through the CNN.</li>
+                    <li>Use the PPO policy to choose modal coefficients.</li>
+                    <li>Convert the coefficients into an SLM phase update.</li>
+                    <li>Apply the update and repeat the loop.</li>
+                </ol>
+                <p>
+                    In one sentence, the project is about using an RL-CNN feedback controller to learn SLM phase
+                    corrections from detector intensity images, so that an optical system can maintain a target output
+                    pattern even when the medium introduces time-varying phase drift.
+                </p>
+            </section>
+        </li>
+        <li>
             <a href="https://mpl.mpg.de/">Max Planck Institute of Light</a>
             <p>
                 In the summer of 2025, I performed research 
