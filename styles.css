@@ -25,6 +25,25 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.boxed-link-container {
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+.boxed-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.boxed-link:hover {
+    background-color: #e9f2ff;
+}
+
 .text-container {
     width: 90%;
     max-width: 800px;
