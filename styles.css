@@ -30,8 +30,11 @@ nav ul li a:hover {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    align-items: center;
     margin: 20px auto 10px;
     width: 90%;
+    max-width: 800px;
+    text-align: center;
 }
 
 .research-link {
