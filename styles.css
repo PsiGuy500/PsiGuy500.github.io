@@ -25,23 +25,28 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.boxed-link-container {
-    margin: 16px auto 0;
-    text-align: center;
+.research-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto 10px;
+    width: 90%;
 }
 
-.boxed-link {
-    display: inline-block;
-    padding: 8px 14px;
+.research-link {
     border: 2px solid #007bff;
     border-radius: 6px;
-    text-decoration: none;
     color: #007bff;
     font-weight: bold;
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: #ffffff;
 }
 
-.boxed-link:hover {
-    background-color: #e9f2ff;
+.research-link:hover {
+    background-color: #e7f1ff;
+    text-decoration: none;
 }
 
 .text-container {
